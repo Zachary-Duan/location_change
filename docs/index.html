@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="下载后双击启动，自动准备连接组件。默认地图无需 Key，在自己的 Mac 或 Windows 电脑上连接 iPhone 并选择测试位置。">
+  <title>iPhone 定位 · 公共入口</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./site.css"><script src="./site.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header><a class="brand" href="./" aria-label="iPhone 定位首页"><span class="brand-mark" aria-hidden="true">◎</span><span>iPhone 定位<small>公开访问入口</small></span></a><nav class="help-links" aria-label="使用指引"><a class="quiet-link" href="#first-open-guide">首次打开</a><a class="quiet-link" href="#questions">使用帮助</a></nav></header>
+    <main>
+      <div class="page-heading"><div><p class="eyebrow">地图选点 · 本机连接</p><h1>下载一次，<br class="mobile-break">双击打开。</h1><p class="intro">自动准备运行组件，默认地图免配置。连接 iPhone 后，直接搜索选点。</p></div><span class="platform">Mac / Windows</span></div>
+      <div class="workspace">
+        <section class="setup-panel" aria-labelledby="setup-heading">
+          <div class="section-heading"><h2 id="setup-heading">开始使用</h2><span>三个步骤</span></div>
+          <div id="mobile-notice" class="mobile-notice" hidden>你可以在手机上浏览这个网站。连接和修改定位需要在电脑上完成，请把网址发到自己的 Mac 或 Windows 电脑后继续。</div>
+          <ol class="steps">
+            <li><span class="step-number">01</span><div class="step-content"><h3>下载并启动助手</h3><p>按电脑系统下载，完整解压后启动。Mac 双击 <code>启动.command</code>，Windows 双击 <code>启动.cmd</code>；无需手动安装 Python。</p><div class="download-actions"><a id="download" class="button primary" href="./downloads/iphone-location-mac.zip" download="iPhone定位-Mac连接助手.zip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg>下载 Mac 版</a><a id="download-windows" class="button secondary" href="./downloads/iphone-location-windows.zip" download="iPhone定位-Windows连接助手.zip">下载 Windows 版</a></div><p class="meta">Mac：macOS 13+ · Windows：10（22H2）/ 11，Intel / AMD 64 位</p><p id="download-status" class="inline-status" role="status" aria-live="polite"></p><details id="windows-guide" class="first-open-guide">
+                <summary>Windows 首次使用</summary>
+                <ol class="permission-steps windows-steps">
+                  <li><strong>先准备 Apple 手机连接服务</strong><span>按连接库要求安装并打开 <a href="https://apps.microsoft.com/detail/9pb2mz1zmb1s" target="_blank" rel="noopener noreferrer">Microsoft Store 版 iTunes ↗</a>。若已安装 Apple 设备 App，可先确认它能识别 iPhone；助手仍提示缺少服务时，再安装 iTunes。</span></li>
+                  <li><strong>完整解压，双击“启动.cmd”</strong><span>右键下载的 ZIP，选择“全部解压”，放在自己的“下载”或“文档”文件夹。请勿在压缩包预览内直接运行。</span></li>
+                  <li><strong>等待组件准备完成</strong><span>首次需要联网，完成后自动打开地图。保持启动窗口开启；安装中断后重新双击即可重试。</span></li>
+                  <li><strong>连接、信任，再准备连接</strong><span>使用数据线连接 iPhone，在手机确认“信任此电脑”，开启开发者模式，然后在地图控制台点击“准备连接”。</span></li>
+                </ol>
+                <p class="guide-note">Windows 版目前为测试版，尚未完成 Windows 实机验证。简易连接推荐 iOS 17.4 或更新版本，暂不支持 iOS 17.0–17.3.x 和 Windows ARM。iOS 13–16 使用旧版连接方式，具体效果需在设备上确认。</p>
+                <details class="guide-troubleshooting"><summary>Windows 提示阻止运行？</summary><p>当前助手未签名。如果只是 SmartScreen 的“Windows 已保护你的电脑”，请先核对下载来源和文件；确认可信后，可在“更多信息”中选择“仍要运行”。如果没有该选项、设备受组织管理或明确报告病毒，请保留提示并联系管理员或反馈问题，无需关闭系统安全保护。</p></details>
+                <a class="quiet-link" href="https://support.apple.com/zh-cn/108643" target="_blank" rel="noopener noreferrer">Apple：电脑无法识别 iPhone 时 ↗</a>
+              </details><details id="first-open-guide" class="first-open-guide" open>
+                <summary>首次打开被 macOS 拦截？</summary>
+                <p class="guide-intro">如果看到“未打开‘启动.command’”或“Apple 无法验证”的提示，按下面 4 步操作。</p>
+                <ol class="permission-steps">
+                  <li><strong>在提示窗口点击“完成”</strong><span>保留下载文件，继续下一步。</span></li>
+                  <li><strong>打开“系统设置 → 隐私与安全性”</strong><span>在右侧页面向下滚动。</span></li>
+                  <li><strong>找到“启动.command”，点击“仍要打开”</strong><span>确认你放行的是刚下载的助手。</span></li>
+                  <li><strong>在确认弹窗点击“仍要打开”</strong><span>部分系统版本显示为“打开”；按提示完成身份验证，等待助手自动准备组件、打开地图。</span></li>
+                </ol>
+                <div class="guide-gallery" aria-label="首次打开步骤截图">
+                  <figure class="guide-shot">
+                    <a class="guide-image-link" href="./images/mac-privacy-security.png" data-guide-image data-title="第 2–3 步：在隐私与安全性中允许打开" aria-label="放大：隐私与安全性中的仍要打开按钮">
+                      <img src="./images/mac-privacy-security.png" alt="Mac 隐私与安全性页面，启动.command 被阻止的提示右侧有仍要打开按钮。" width="1446" height="1158" loading="lazy" decoding="async">
+                      <span class="image-enlarge" aria-hidden="true">点击放大</span>
+                    </a>
+                    <figcaption><strong>第 2–3 步 · 系统设置</strong><span>找到“启动.command”右侧的“仍要打开”。</span></figcaption>
+                  </figure>
+                  <figure class="guide-shot">
+                    <a class="guide-image-link" href="./images/mac-open-confirmation.png" data-guide-image data-title="第 4 步：在确认弹窗中选择仍要打开" aria-label="放大：确认弹窗中的仍要打开按钮">
+                      <img src="./images/mac-open-confirmation.png" alt="打开启动.command 的确认弹窗，中间的按钮是仍要打开。" width="520" height="638" loading="lazy" decoding="async">
+                      <span class="image-enlarge" aria-hidden="true">点击放大</span>
+                    </a>
+                    <figcaption><strong>第 4 步 · 确认打开</strong><span>在弹窗中点击中间的“仍要打开”。</span></figcaption>
+                  </figure>
+                </div>
+                <p class="guide-note">当前助手未经过 Apple 签名和公证。请仅对确认下载自本站且未被改动的文件执行这些步骤，无需关闭系统安全保护。</p>
+                <details class="guide-troubleshooting"><summary>没有看到“仍要打开”？</summary><p>重新双击“启动.command”，再返回“隐私与安全性”查看。受公司或学校管理的 Mac 可能需要管理员协助。此说明仅适用于“无法验证”提示；“将损坏电脑”或“文件已损坏”需要另行检查。</p></details>
+                <a class="quiet-link" href="https://support.apple.com/zh-cn/102445" target="_blank" rel="noopener noreferrer">查看 Apple 官方说明 ↗</a>
+              </details></div></li>
+            <li><span class="step-number">02</span><div class="step-content"><h3>连接 iPhone</h3><p>用数据线连接到自己的电脑，解锁并信任电脑。开启开发者模式后，在控制台点击“准备连接”。</p><details><summary>在哪里开启开发者模式？</summary><p>在 iPhone 的“设置 → 隐私与安全性 → 开发者模式”中开启，按提示重启并确认。若看不到入口，先确认电脑能识别并信任手机，点击“准备连接”后再查看；Mac 还可通过 Xcode 配对。</p></details></div></li>
+            <li><span class="step-number">03</span><div class="step-content"><h3>在地图上选择地点</h3><p>默认地图自动打开，无需申请 Key。搜索地点或点击地图，点击“开始模拟”。结束后点击“停止模拟”，在手机上确认恢复。</p><div class="flow" aria-label="操作顺序"><span>搜索地点</span><span aria-hidden="true">→</span><span>选择目标</span><span aria-hidden="true">→</span><span>开始模拟</span></div></div></li>
+          </ol>
+        </section>
+        <aside class="side-panel">
+          <section class="connect-card" aria-labelledby="connect-heading"><div class="small-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M10 18h4"/></svg></div><h2 id="connect-heading">已经启动助手？</h2><p>打开这台电脑上的地图控制台，继续操作。</p><a id="open-console" class="button secondary" href="http://127.0.0.1:8765/" target="_blank" rel="noopener noreferrer">打开本机控制台 <span aria-hidden="true">↗</span></a><p class="meta">这里只打开你的电脑，不会连接网站维护者的设备。</p><details class="address-details"><summary>助手显示的是其他地址</summary><form id="address-form"><label for="local-address">粘贴启动窗口里的本机网址</label><input id="local-address" type="url" value="http://127.0.0.1:8765/" autocomplete="off" spellcheck="false" required><button class="button secondary" type="submit">使用这个地址</button></form><p id="address-status" class="inline-status" role="status" aria-live="polite"></p></details></section>
+          <section class="requirements"><h2>使用前准备</h2><ul><li><strong>一台电脑与数据线</strong><span>Mac 或 Windows 10（22H2）/ 11（Intel / AMD 64 位）。纯手机网页不能修改系统定位。</span></li><li><strong>首次启动保持联网</strong><span>运行组件自动下载到助手目录，后续打开无需重复安装。</span></li><li><strong>地图直接可用</strong><span>免配置地图支持搜索和选点。需要高德时，可在控制台“地图设置”中切换。</span></li></ul></section>
+          <p class="privacy-note">配对信息保存在自己的电脑。默认地图请求发给 OpenStreetMap，搜索词发给 Photon；使用高德时，请求发给高德。</p>
+        </aside>
+      </div>
+      <section class="faq" id="questions" aria-labelledby="faq-heading"><div class="section-heading"><h2 id="faq-heading">常见问题</h2><span>遇到问题，从这里开始</span></div><div class="faq-grid"><details><summary>打开网站就能修改手机定位吗？</summary><p>网站提供公开下载和使用入口。实际的定位操作在你自己的电脑上执行，需要启动连接助手并通过 USB 连接自己的 iPhone。网页本身不能直接修改 iPhone 系统定位。</p></details><details><summary>现在还要申请高德 Key 吗？</summary><p>不需要。默认使用免配置地图，打开即可搜索、选点。如果更习惯高德，可以在“地图设置”中切换并填写自己的 Key；这是可选项。</p><p>免配置地图依赖公共服务，中文地点覆盖、网络可用性可能与高德不同。搜索不到时，可以补充城市名称、点击地图选点，或切换高德。</p></details><details><summary>助手启动失败，或本机页面打不开？</summary><p>Mac 需要 macOS 13+，Windows 需要 10 / 11 的 Intel / AMD 64 位系统。保持启动窗口开启。首次自动下载组件需要网络；下载中断时重新双击启动即可重试。默认端口被占用时，助手会自动选择其他端口并打开页面。可以把启动窗口里显示的新网址填入上方“其他地址”。</p><p>看到“Apple 无法验证”的提示时，请按下载按钮下方的<a href="#first-open-guide">首次打开步骤</a>操作。当前 Mac 助手未签名和公证，需要由使用者在自己的 Mac 上确认。Windows 请先看 <a href="#windows-guide">Windows 首次使用</a>，确认 Apple 手机连接服务已运行。</p></details><details><summary>支持所有 iPhone 和 App 吗？</summary><p>Windows 简易版推荐 iOS 17.4+，暂不支持 iOS 17.0–17.3.x；Windows ARM 暂不支持。Windows 版尚待实机验证。</p><p>具体效果取决于 iOS 版本、开发者连接状态和目标 App。部分 App 会识别或忽略模拟定位。发送后请在手机上核对实际位置；使用完毕请停止模拟并确认恢复。</p></details><details><summary>关掉网页就会停止模拟吗？</summary><p>不会。请先在本机控制台点击“停止模拟”，在 iPhone 上确认恢复真实位置，再关闭终端。断线、强制退出和重启后的状态需要在手机上检查。</p></details><details><summary>下载包里包含什么？</summary><p>自动启动器、单页地图控制台、使用说明和测试源码。包内没有任何人的高德密钥、手机配对记录或运行缓存。首次启动从官方发布源下载运行工具、Python 和连接组件，保存在助手目录。</p><a class="quiet-link" href="./downloads/README.md" target="_blank" rel="noopener">查看使用说明 ↗</a></details></div></section>
+    </main>
+    <footer><span>iPhone 定位 · 地图与设备测试工具</span><span>公开网站可自由访问，设备操作由使用者在本机完成。</span></footer>
+  </div>
+  <dialog id="guide-image-dialog" class="guide-image-dialog" aria-labelledby="guide-image-title">
+    <div class="image-dialog-heading"><h2 id="guide-image-title">首次打开操作截图</h2><button id="guide-image-close" type="button" aria-label="关闭图片">关闭 ×</button></div>
+    <div class="image-dialog-content"><img id="guide-image-full" alt=""></div>
+  </dialog>
+</body>
+</html>
